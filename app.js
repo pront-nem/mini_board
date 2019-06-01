@@ -46,3 +46,10 @@ function getFromClient(request,response){
 
     }
 }
+//loginのアクセス処理
+function response_login(request,response){
+    var content = ejs.render(login_page,{});
+    response.writeHead(200,{'Content-Type':'text/html'});
+    response.write(content);
+    response.end();
+}
